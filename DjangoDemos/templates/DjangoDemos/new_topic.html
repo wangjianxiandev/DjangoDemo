@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#继承base.html#}
+{% extends "DjangoDemos/base.html"%}
+{% load bootstrap3 %}
+{% block  header %}
+    <h2>Add a new topic:</h2>
+{% endblock header %}
+{% block content %}
+    <form action="{%  url 'DjangoDemos:new_topic' %}" method="post" class="form">
+    {# 防止攻击者利用表单来获得对服务器未经授权的访问   #}
+        {%  csrf_token %}
+    {#使用DJango创建表单只需包含变量as_p让Django以段落的格式渲染所有表单元素    #}
+{#        {{ form.as_p }}#}
+        {% bootstrap_form form %}
+{#Django不会为表单创建按钮，所以自行创建#}
+        {% buttons %}
+    <button name="submit">add topic</button>
+    {% endbuttons %}
+    </form>
+{% endblock content %}
+</body>
+</html>
