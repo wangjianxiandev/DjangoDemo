@@ -34,7 +34,7 @@ six==1.11.0
 static3==0.7.0
 typed-ast==1.1.0
 url==0.4.2
-urllib3==1.23
+urllib3==1.26.5
 wrapt==1.10.11
 psycopg2>=2.6.1
 python-3.6.6
