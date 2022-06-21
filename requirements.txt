@@ -15,7 +15,7 @@ kiwisolver==1.0.1
 lazy-object-proxy==1.3.1
 matplotlib==2.2.3
 mccabe==0.6.1
-numpy==1.15.1
+numpy==1.22.0
 post==1.0.2
 public==1.0.3
 pygal==2.4.0
